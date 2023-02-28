@@ -1,0 +1,16 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/caojiantao/blog.git",
+  "author": "caojiantao <13437104137@163.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "moment": "^2.29.4",
+    "vuepress": "^1.9.8"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  }
+}

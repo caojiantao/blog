@@ -1,0 +1,108 @@
+---
+title: 常见的限流算法
+---
+
+## 固定窗口
+
+![](/images/08a588a9efc3e13e82dc8fad6680f869.png)
+
+固定时间窗口限制访问频次，存在临界问题。
+
+## 滑动窗口
+
+![](/images/bdc0108eadbed13754e74dd04d4885e2.png)
+
+固定窗口升级版，划分窗口为多个小窗口，增加精度。
+
+```java
+public class SlidingWindowLimiter {
+
+    private long windowWidth;
+    private long limit;
+    // 理解成一个环，循环利用
+    private AtomicReferenceArray<Window> windows;
+
+    /**
+     * @param windowWidth 子窗口宽度（ms）
+     * @param limit       时间窗口限流大小
+     * @param windowSize  子窗口数量
+     */
+    public SlidingWindowLimiter(long windowWidth, long limit, int windowSize) {
+        this.windowWidth = windowWidth;
+        this.limit = limit;
+        this.windows = new AtomicReferenceArray<>(windowSize);
+    }
+
+    /**
+     * 1. 定位到当前小窗口
+     * 2. 汇总当前时间窗口计数
+     * 3. if incre
+     */
+    public boolean acquire() {
+        Window window = currentWindow();
+        long count = count(window);
+        // if incre 原子性？
+        if (count >= limit) {
+            return false;
+        }
+        window.adder.increment();
+        return true;
+    }
+
+    private Window currentWindow() {
+        long id = System.currentTimeMillis() / windowWidth;
+        int index = (int) (id % windows.length());
+        while (true) {
+            Window window = windows.get(index);
+            if (window != null && window.id == id) {
+                return window;
+            }
+            Window newWin = new Window(id);
+            if (windows.compareAndSet(index, window, newWin)) {
+                return newWin;
+            } else {
+                Thread.yield();
+            }
+        }
+    }
+
+    private long count(Window window) {
+        long count = 0;
+        long currentId = window.id;
+        int index = (int) (window.id % windows.length());
+        for (int i = 0; i < windows.length(); i++) {
+            if (window != null && window.id + i == currentId) {
+                count += window.adder.longValue();
+            }
+            // 防止非负数
+            index = ((index - 1) % windows.length() + windows.length()) % windows.length();
+            window = windows.get(index);
+        }
+        return count;
+    }
+
+    private static class Window {
+        private long id;
+        private LongAdder adder;
+
+        public Window(long id) {
+            this.id = id;
+            this.adder = new LongAdder();
+        }
+    }
+}
+```
+
+## 漏桶
+
+![](/images/6a2dbcd786c9419a43d585c4360762ab.png)
+
+以任意速率注入水，保证均匀流出，注入过量则会溢出。
+
+## 令牌桶
+
+![](/images/61a30eb9b112e17fcd18dd158d5dedd0.png)
+
+以一定速率放入令牌，每次请求消耗一个令牌。
+
+> 与漏桶相比，能更好应对突发请求。
