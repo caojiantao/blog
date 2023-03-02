@@ -1,20 +1,23 @@
-const getSidebar = require("./utils/side-bar.js")
+const getConfig = require("vuepress-bar");
+const slugify = require("transliteration").slugify;
 
-let sidebar = getSidebar();
+const { sidebar } = getConfig();
 
+for (let menu of sidebar) {
+  menu.children = menu.children
+    .filter(item => item)
+    .map(item => {
+      return slugify(item, { ignore: ["/", "."] });
+    });
+}
 
 module.exports = {
   title: "涛涛小站",
   description: "曹建涛的个人博客",
   locales: {
     "/": {
-      lang: "zh-CN"
-    }
-  },
-  markdown: {
-    lineNumbers: true,
-    extendMarkdown: md => {
-    }
+      lang: "zh-CN",
+    },
   },
   themeConfig: {
     repo: "caojiantao",
@@ -37,5 +40,6 @@ module.exports = {
       },
     },
     "@vuepress/back-to-top": true,
+    "permalink-pinyin": true,
   },
 };
