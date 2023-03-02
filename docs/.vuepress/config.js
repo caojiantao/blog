@@ -29,5 +29,6 @@ module.exports = {
         return moment(timestamp).format("L");
       },
     },
+    "@vuepress/back-to-top": true,
   },
 };
