@@ -6,8 +6,15 @@ let sidebar = getSidebar();
 module.exports = {
   title: "涛涛小站",
   description: "曹建涛的个人博客",
+  locales: {
+    "/": {
+      lang: "zh-CN"
+    }
+  },
   markdown: {
     lineNumbers: true,
+    extendMarkdown: md => {
+    }
   },
   themeConfig: {
     repo: "caojiantao",
@@ -25,7 +32,7 @@ module.exports = {
     "@vuepress/last-updated": {
       transformer: (timestamp, lang) => {
         const moment = require("moment");
-        moment.locale("zh-cn");
+        moment.locale(lang);
         return moment(timestamp).format("L");
       },
     },
