@@ -9,8 +9,8 @@
     "@vuepress/plugin-back-to-top": "^1.9.9",
     "moment": "^2.29.4",
     "vuepress": "^1.9.8",
-    "vuepress-bar": "^0.4.4",
-    "vuepress-plugin-permalink-pinyin": "^1.1.0"
+    "vuepress-plugin-autobar": "0.1.7",
+    "vuepress-plugin-permalink-pinyin": "0.2.0"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",

@@ -1,16 +1,3 @@
-const getConfig = require("vuepress-bar");
-const slugify = require("transliteration").slugify;
-
-const { sidebar } = getConfig();
-
-for (let menu of sidebar) {
-  menu.children = menu.children
-    .filter(item => item)
-    .map(item => {
-      return slugify(item, { ignore: ["/", "."] });
-    });
-}
-
 module.exports = {
   title: "涛涛小站",
   description: "曹建涛的个人博客",
@@ -29,7 +16,7 @@ module.exports = {
     docsRepo: "caojiantao/blog",
     docsDir: "docs",
     docsBranch: "main",
-    sidebar: sidebar,
+    sidebar: 'auto',
   },
   plugins: {
     "@vuepress/last-updated": {
@@ -41,5 +28,8 @@ module.exports = {
     },
     "@vuepress/back-to-top": true,
     "permalink-pinyin": true,
+    "autobar": {
+      pinyinNav: true,
+    }
   },
 };
