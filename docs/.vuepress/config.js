@@ -1,3 +1,10 @@
+const getConfig = require("vuepress-bar");
+
+const { sidebar } = getConfig({
+  pinyinNav: true,
+  addReadMeToFirstGroup: false
+});
+
 module.exports = {
   title: "涛涛小站",
   description: "曹建涛的个人博客",
@@ -16,7 +23,7 @@ module.exports = {
     docsRepo: "caojiantao/blog",
     docsDir: "docs",
     docsBranch: "main",
-    sidebar: 'auto',
+    sidebar: sidebar.slice(1, -1),
   },
   plugins: {
     "@vuepress/last-updated": {
@@ -26,10 +33,7 @@ module.exports = {
         return moment(timestamp).format("L");
       },
     },
-    "@vuepress/back-to-top": true,
-    "permalink-pinyin": true,
-    "autobar": {
-      pinyinNav: true,
-    }
+    "@vuepress/back-to-top": {},
+    "permalink-pinyin": {},
   },
 };
