@@ -7,11 +7,9 @@
   "license": "MIT",
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.9.9",
-    "@vuepress/plugin-google-analytics": "^1.9.9",
     "moment": "^2.29.4",
     "vuepress": "^1.9.8",
     "vuepress-bar": "^0.4.5",
-    "vuepress-plugin-baidu-autopush": "^1.0.1",
     "vuepress-plugin-permalink-pinyin": "^1.1.0"
   },
   "scripts": {

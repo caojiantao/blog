@@ -35,8 +35,5 @@ module.exports = {
     },
     "@vuepress/back-to-top": {},
     "permalink-pinyin": {},
-    '@vuepress/google-analytics': {
-      'ga': 'G-DPNDK2M4CG'
-    },
   },
 };
