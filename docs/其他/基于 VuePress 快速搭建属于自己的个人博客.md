@@ -123,40 +123,6 @@ module.exports = {
 
 > 有意思的是，vuepress-bar 是外国人写的，pinyinNav 并没有兼容到 sidebar，于是我贡献了 Github 的第一个 [PR](https://github.com/ozum/vuepress-bar/pull/56)
 
-## 搜索引擎抓取
-
-```bash
-# 百度
-yarn add -D vuepress-plugin-baidu-autopush
-# 360
-yarn add -D vuepress-plugin-qihu-autopush
-```
-
-```javascript
-module.exports = {
-  plugins: {
-    'baidu-autopush': {},
-    'qihu-autopush': {},
-  }
-}
-```
-
-## 访问统计
-
-```bash
-yarn add -D @vuepress/plugin-google-analytics
-```
-
-```javascript
-module.exports = {
-  plugins: {
-    '@vuepress/google-analytics': {
-      'ga': 'UA-00000000-0' //替换成自己实际申请的ID
-    }
-  }
-}
-```
-
 ## 参考
 
 1. [VuePress 中文文档](https://www.vuepress.cn/)
