@@ -1,5 +1,6 @@
 ---
 title: synchronized 底层原理
+permalink: 79399730144.html
 ---
 
 ## 一探究竟：反编译

@@ -1,5 +1,6 @@
 ---
 title: slice 和 splice 的区别
+permalink: 79398636052.html
 ---
 
 ## slice

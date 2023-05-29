@@ -1,5 +1,6 @@
 ---
 title: AQS 底层原理
+permalink: 79399661852.html
 ---
 
 ## AQS介绍

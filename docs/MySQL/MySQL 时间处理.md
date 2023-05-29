@@ -1,5 +1,6 @@
 ---
 title: MySQL 时间处理
+permalink: 79399853188.html
 ---
 
 ## 时间戳格式化

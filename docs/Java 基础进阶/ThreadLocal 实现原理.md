@@ -1,5 +1,6 @@
 ---
 title: ThreadLocal 实现原理
+permalink: 79399756680.html
 ---
 
 ## ThreadLocal介绍

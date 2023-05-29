@@ -1,7 +1,6 @@
 const getConfig = require("vuepress-bar");
 
 const { sidebar } = getConfig({
-  pinyinNav: true,
   addReadMeToFirstGroup: false
 });
 
@@ -34,6 +33,5 @@ module.exports = {
       },
     },
     "@vuepress/back-to-top": {},
-    "permalink-pinyin": {},
   },
 };

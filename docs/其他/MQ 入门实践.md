@@ -1,5 +1,6 @@
 ---
 title: MQ 入门实践
+permalink: 79398526796.html
 ---
 
 ## MQ

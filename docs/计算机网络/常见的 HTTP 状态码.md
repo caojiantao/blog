@@ -1,5 +1,6 @@
 ---
 title: 常见的 HTTP 状态码
+permalink: 79398079180.html
 ---
 
 ## 状态码

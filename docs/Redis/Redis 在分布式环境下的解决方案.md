@@ -1,5 +1,6 @@
 ---
 title: Redis 在分布式环境下的解决方案
+permalink: 79399964348.html
 ---
 
 ## 主从同步

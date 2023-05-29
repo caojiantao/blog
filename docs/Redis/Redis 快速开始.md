@@ -1,5 +1,6 @@
 ---
 title: Redis 快速开始
+permalink: 79399917388.html
 ---
 
 ## Redis 客户端

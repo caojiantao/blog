@@ -1,5 +1,6 @@
 ---
 title: Markdown 用代码画时序图
+permalink: 79398503544.html
 ---
 
 ## 背景

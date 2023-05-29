@@ -1,5 +1,6 @@
 ---
 title: 排查 GC 问题
+permalink: 79399599044.html
 ---
 
 ## 业务背景

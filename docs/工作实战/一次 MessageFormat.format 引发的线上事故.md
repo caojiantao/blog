@@ -1,5 +1,6 @@
 ---
 title: 一次 MessageFormat.format 引发的线上事故
+permalink: 79397996200.html
 ---
 
 ## 问题回顾

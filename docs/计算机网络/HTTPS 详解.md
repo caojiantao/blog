@@ -1,5 +1,6 @@
 ---
 title: HTTPS 详解
+permalink: 79398103716.html
 ---
 
 ## HTTPS 介绍

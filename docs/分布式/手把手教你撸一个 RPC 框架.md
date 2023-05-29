@@ -1,5 +1,6 @@
 ---
 title: 手把手教你撸一个 RPC 框架
+permalink: 79397766404.html
 ---
 
 ## RPC 简介

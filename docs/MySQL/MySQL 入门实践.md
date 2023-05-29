@@ -1,5 +1,6 @@
 ---
 title: MySQL 入门实践
+permalink: 79399832612.html
 ---
 
 ## 1 数据库

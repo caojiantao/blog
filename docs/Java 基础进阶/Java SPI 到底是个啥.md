@@ -1,5 +1,6 @@
 ---
 title: Java SPI 到底是个啥
+permalink: 79399684924.html
 ---
 
 ## 啥是 SPI

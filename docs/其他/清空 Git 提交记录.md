@@ -1,5 +1,6 @@
 ---
 title: 清空 Github 提交记录
+permalink: 79398309176.html
 ---
 
 ## 背景

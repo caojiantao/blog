@@ -1,6 +1,6 @@
 ---
-layout: post 
 title: Docker 入门实践
+permalink: 79398451204.html
 ---
 
 ## 1 Docker 介绍

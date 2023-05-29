@@ -1,5 +1,6 @@
 ---
 title: Redis 高级特性
+permalink: 79399888984.html
 ---
 
 ## 事务

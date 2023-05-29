@@ -1,5 +1,6 @@
 ---
 title: Redis 入门实践
+permalink: 79399940968.html
 ---
 
 ## [Redis 介绍](https://redis.io)

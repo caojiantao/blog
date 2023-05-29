@@ -1,5 +1,6 @@
 ---
 title: 别再分不清 for in 和 for of 了
+permalink: 79398572696.html
 ---
 
 省流，直接说结论；
