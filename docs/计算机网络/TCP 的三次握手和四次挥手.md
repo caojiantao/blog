@@ -23,7 +23,7 @@ permalink: 79398127952.html
 
 通过三次握手，来确认双方的**收发能力**，以服务A请求与服务B建立连接为例；
 
-![](http://image.caojiantao.site:38080/b7eab591fa7dc0a1cd9e02d7b25c3de7.png)
+![](http://image.caojiantao.site:1024/b7eab591fa7dc0a1cd9e02d7b25c3de7.png)
 
 1. 初始状态A为CLOSED，B为LISTEN;
 2. A给B发送报文，设置SYN标志位，附带Seq序列号，并更新状态为SYN-SENT；
@@ -41,7 +41,7 @@ permalink: 79398127952.html
 
 ## 四次挥手
 
-![](http://image.caojiantao.site:38080/fb702ee4854b2e4eca9298f78a8d45ed.png)
+![](http://image.caojiantao.site:1024/fb702ee4854b2e4eca9298f78a8d45ed.png)
 
 1. A发起报文请求断开连接，设置FIN标志位，附带Seq序号，并更新状态为FIN_WAIT_1；
 2. B收到后并回答，设置ACK标志位，附带Ack确认序号和Seq序号，并更新状态为CLOSE_WAIT；

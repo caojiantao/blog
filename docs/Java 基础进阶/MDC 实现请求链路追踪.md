@@ -5,7 +5,7 @@ permalink: 79399705796.html
 
 ## 业务背景
 
-![](http://image.caojiantao.site:38080/fc3c549d7c8a03da504fd74236859b58.png)
+![](http://image.caojiantao.site:1024/fc3c549d7c8a03da504fd74236859b58.png)
 
 当需要在线上排查某次请求异常时，就急需一个`traceId`能跟踪到该异常请求的全链路。
 

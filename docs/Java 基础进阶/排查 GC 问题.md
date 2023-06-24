@@ -15,7 +15,7 @@ permalink: 79399599044.html
 
 #### jps
 
-![](http://image.caojiantao.site:38080/3F3412DB533D1536CDA5E80CF3A028FB.png)
+![](http://image.caojiantao.site:1024/3F3412DB533D1536CDA5E80CF3A028FB.png)
 
 类似linux下的ps，只列出Java的进程；
 
@@ -32,7 +32,7 @@ options:
 
 #### jinfo
 
-![](http://image.caojiantao.site:38080/0EE749D2CE710B6D2031B16B2EE2E6F0.png)
+![](http://image.caojiantao.site:1024/0EE749D2CE710B6D2031B16B2EE2E6F0.png)
 
 查看JVM参数；
 
@@ -48,7 +48,7 @@ option:
 
 #### jstat
 
-![](http://image.caojiantao.site:38080/9F3A7A243F67978CD10FB8B360D6ABB1.png)
+![](http://image.caojiantao.site:1024/9F3A7A243F67978CD10FB8B360D6ABB1.png)
 
 可观察JVM运行时的信息，例如gc情况和堆信息；
 
@@ -68,7 +68,7 @@ count: 采集次数
 
 > 注意：输出内容中的线程ID为16进制。
 
-![](http://image.caojiantao.site:38080/A46267E4B5ABAADD7F64C1C58607FACA.png)
+![](http://image.caojiantao.site:1024/A46267E4B5ABAADD7F64C1C58607FACA.png)
 
 查看线程堆栈；
 
@@ -84,7 +84,7 @@ option:
 
 > 注意：dump会暂停应用，线上慎用。
 
-![](http://image.caojiantao.site:38080/25996821B5CE84383B47F7B160529A13.png)
+![](http://image.caojiantao.site:1024/25996821B5CE84383B47F7B160529A13.png)
 
 导出堆数据到文件，线上GC排查必备；
 
@@ -104,7 +104,7 @@ dump-options: dump设置，例如 `format=b,file=heap.bin`。
 
 可视化性能监控工具；
 
-![](http://image.caojiantao.site:38080/2688263F5E527393C3C6DD100660C230.jpeg)
+![](http://image.caojiantao.site:1024/2688263F5E527393C3C6DD100660C230.jpeg)
 
 ### 第三方工具
 
@@ -112,13 +112,13 @@ dump-options: dump设置，例如 `format=b,file=heap.bin`。
 
 Java应用诊断利器
 
-![](http://image.caojiantao.site:38080/A6EB71801EAF3EFBD77654E200D47DBA.png)
+![](http://image.caojiantao.site:1024/A6EB71801EAF3EFBD77654E200D47DBA.png)
 
 #### [GCeasy](https://gceasy.ycrash.cn/)
 
 在线GC日志分析
 
-![](http://image.caojiantao.site:38080/C770214E9C56C9AD182B6DC25BEE6E8A.png)
+![](http://image.caojiantao.site:1024/C770214E9C56C9AD182B6DC25BEE6E8A.png)
 
 ## GC排查步骤
 

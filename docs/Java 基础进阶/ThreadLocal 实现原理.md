@@ -27,7 +27,7 @@ new Thread(() -> {
 
 ## 原理图解
 
-![](http://image.caojiantao.site:38080/f1ee2b91151f23b0ca79a21e60981427.png)
+![](http://image.caojiantao.site:1024/f1ee2b91151f23b0ca79a21e60981427.png)
 
 着重描述下`ThreadLocalMap`；
 

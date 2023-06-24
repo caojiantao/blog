@@ -78,7 +78,7 @@ CREATE TABLE distribution_id (
 
 `Twitter`的开源算法，也叫**雪花算法**，目前被广泛使用。
 
-![](http://image.caojiantao.site:38080/ee56d5ffca5034637d4ab65738f550a7.webp)
+![](http://image.caojiantao.site:1024/ee56d5ffca5034637d4ab65738f550a7.webp)
 
 如上图所示，采用64位存储，大体分为4部分
 

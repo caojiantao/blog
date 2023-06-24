@@ -23,7 +23,7 @@ Redis 是一个开源的使用 ANSI C 语言编写、遵守 BSD 协议、支持�
 redis-server.exe redis.windows.conf
 ```
 
-![](http://image.caojiantao.site:38080/d04c9b1f520ae302afafa43c75c3abea.png)
+![](http://image.caojiantao.site:1024/d04c9b1f520ae302afafa43c75c3abea.png)
 
 ### 2.2 Linux
 
@@ -43,7 +43,7 @@ cd src
 ./redis-server ../redis.conf
 ```
 
-![](http://image.caojiantao.site:38080/7d02ea31f2e676c1f6fd3c53b097afae.png)
+![](http://image.caojiantao.site:1024/7d02ea31f2e676c1f6fd3c53b097afae.png)
 
 
 ## 3 配置

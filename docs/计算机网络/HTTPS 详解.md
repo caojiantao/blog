@@ -11,11 +11,11 @@ HTTP，Hyper Text Transfer Protocol，超文本传输协议，是一种简单的
 
 HTTPS = HTTP + SSL/TSL。TSL，Transport Layer Security，传输层安全协议，是 SSL 的升级版本，位于 OSI 中的会话层。
 
-![](http://image.caojiantao.site:38080/31ac5def8f5856a562712486cb4ec54f.png)
+![](http://image.caojiantao.site:1024/31ac5def8f5856a562712486cb4ec54f.png)
 
 ## 流程详解
 
-![](http://image.caojiantao.site:38080/6324e430caf23566f93214cabf03e2ce.png)
+![](http://image.caojiantao.site:1024/6324e430caf23566f93214cabf03e2ce.png)
 
 将 HTTPS 加密传输的流程简单分为三步；
 
@@ -46,7 +46,7 @@ HTTPS = HTTP + SSL/TSL。TSL，Transport Layer Security，传输层安全协议�
 
 Certificate Authority，证书认证机构，通常系统或者浏览器内置了 CA 的公钥。通过 CA 保证了服务端证书的合法性，避免了中间人攻击。
 
-![](http://image.caojiantao.site:38080/b0b437ba911b5907043ed762982c39ac.png)
+![](http://image.caojiantao.site:1024/b0b437ba911b5907043ed762982c39ac.png)
 
 1. CA 给服务端颁发证书，包含域名、公钥等，并用私钥加签；
 2. 中间人没有 CA 私钥，篡改证书后无法伪造签名；

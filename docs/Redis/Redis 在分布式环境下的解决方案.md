@@ -12,7 +12,7 @@ permalink: 79399964348.html
 
 **主从模式**很好的解决了以上问题。一个 Redis 实例作为主机 master，其他的作为从机 slave，主机主要用于数据的写入，从机则主要提供数据的读取。从机在启动时会同步全量主机数据，主机也会在写入数据的时候同步到所有的从机。
 
-![](http://image.caojiantao.site:38080/761476128de2f9f1f020c83e457b312d.png)
+![](http://image.caojiantao.site:1024/761476128de2f9f1f020c83e457b312d.png)
 
 有两种方式可以设置主从关系；
 
@@ -109,7 +109,7 @@ OK
 
 Sentinel（哨兵）作为一个单独的服务，用来监控 master 主机，间接监控所有 slave 从机，如下图所示；
 
-![](http://image.caojiantao.site:38080/df4feffb8283a7b3f2b2d5517882d4b0.png)
+![](http://image.caojiantao.site:1024/df4feffb8283a7b3f2b2d5517882d4b0.png)
 
 sentinel 主要有以下三个特点；
 
