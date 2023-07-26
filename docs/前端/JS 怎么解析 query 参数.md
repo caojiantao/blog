@@ -6,7 +6,7 @@ permalink: 79398596032.html
 通过URLSearchParams可以很好操作query参数；
 
 ```javascript
-// http://blog.caojiantao.site?keyword=涛涛小站
+// http://blog.caojiantao.site:1024?keyword=涛涛小站
 let param = new URLSearchParams(window.location.search);
 let keyword = param.get('keyword');
 // 涛涛小站
