@@ -4,6 +4,8 @@ const { sidebar } = getConfig({
   addReadMeToFirstGroup: false
 });
 
+console.log(sidebar);
+
 module.exports = {
   title: "涛涛小站",
   description: "曹建涛的个人博客",
@@ -21,7 +23,7 @@ module.exports = {
     docsRepo: "caojiantao/blog",
     docsDir: "docs",
     docsBranch: "main",
-    sidebar: sidebar.slice(1, -1),
+    sidebar: sidebar.slice(1),
   },
   plugins: {
     "@vuepress/last-updated": {
