@@ -17,7 +17,6 @@ module.exports = {
     editLinks: true,
     editLinkText: "编辑此页",
     lastUpdated: "上次更新",
-    search: false,
     activeHeaderLinks: false,
     docsRepo: "caojiantao/blog",
     docsDir: "docs",
@@ -33,5 +32,6 @@ module.exports = {
       },
     },
     "@vuepress/back-to-top": {},
+    '@vuepress/search': {}
   },
 };
