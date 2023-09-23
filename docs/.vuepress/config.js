@@ -1,10 +1,13 @@
 const getConfig = require("vuepress-bar");
 
-const { sidebar } = getConfig({
-  addReadMeToFirstGroup: false
+const { nav, sidebar } = getConfig({
+  addReadMeToFirstGroup: false,
+  filter: (meta) => !meta.individual,
 });
 
-console.log(sidebar);
+// console.log(nav);
+// console.log('------------------------------------------------------------')
+// console.log(sidebar);
 
 module.exports = {
   title: "涛涛小站",
@@ -23,7 +26,8 @@ module.exports = {
     docsRepo: "caojiantao/blog",
     docsDir: "docs",
     docsBranch: "main",
-    sidebar: sidebar.slice(1),
+    nav,
+    sidebar,
   },
   plugins: {
     "@vuepress/last-updated": {
