@@ -2,11 +2,12 @@ const getConfig = require("vuepress-bar");
 
 const { nav, sidebar } = getConfig({
   addReadMeToFirstGroup: false,
-  filter: (meta) => !meta.individual,
+  filter: meta => !meta.hideSideBar,
 });
 
+// console.log('------------------------------ nav ------------------------------')
 // console.log(nav);
-// console.log('------------------------------------------------------------')
+// console.log('------------------------------ sidebar ------------------------------')
 // console.log(sidebar);
 
 module.exports = {

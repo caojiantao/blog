@@ -1,6 +1,7 @@
 ---
 title: 生活
-permalink: 1695481492636.html
+sidebar: false
+hideSideBar: true
 ---
 
-## 生活主题
+<PostList/>
