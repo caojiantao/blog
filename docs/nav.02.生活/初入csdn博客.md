@@ -1,7 +1,7 @@
 ---
 title: 初入csdn博客
 permalink: 1695484019602.html
-date: '2015/05/14'
+date: '2015-05-14'
 ---
 
 [原文链接](https://blog.csdn.net/qq_15002323/article/details/45727761)

@@ -1,6 +1,6 @@
 ---
 title: 学习 DFS 和 BFS
-permalink: 79399460960.html
+permalink: 1695566498741.html
 ---
 
 ## 什么是DFS、BFS

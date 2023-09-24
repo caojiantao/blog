@@ -22,7 +22,6 @@ module.exports = {
     repo: "caojiantao",
     editLinks: true,
     editLinkText: "编辑此页",
-    lastUpdated: "上次更新",
     activeHeaderLinks: false,
     docsRepo: "caojiantao/blog",
     docsDir: "docs",
@@ -31,13 +30,6 @@ module.exports = {
     sidebar,
   },
   plugins: {
-    "@vuepress/last-updated": {
-      transformer: (timestamp, lang) => {
-        const moment = require("moment");
-        moment.locale(lang);
-        return moment(timestamp).format("L");
-      },
-    },
     "@vuepress/back-to-top": {},
     '@vuepress/search': {}
   },

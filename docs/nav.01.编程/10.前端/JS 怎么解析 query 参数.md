@@ -1,6 +1,6 @@
 ---
 title: JS 怎么解析 query 参数
-permalink: 79398596032.html
+permalink: 1695566515015.html
 ---
 
 通过URLSearchParams可以很好操作query参数；
