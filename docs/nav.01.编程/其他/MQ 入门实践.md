@@ -1,6 +1,7 @@
 ---
 title: MQ 入门实践
-permalink: 79398526796.html
+permalink: 1695633610974.html
+date: '2021-04-19'
 ---
 
 ## MQ

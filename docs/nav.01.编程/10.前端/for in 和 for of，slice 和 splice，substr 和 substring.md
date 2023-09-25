@@ -1,6 +1,7 @@
 ---
 title: for in 和 for of，slice 和 splice，substr 和 substring
 permalink: 1689930409973.html
+date: '2023-07-21'
 ---
 
 ## for in 和 for of

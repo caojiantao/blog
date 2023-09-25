@@ -1,6 +1,7 @@
 ---
 title: Redis 入门实践
-permalink: 79399940968.html
+permalink: 1695633729267.html
+date: '2020-12-29'
 ---
 
 ## [Redis 介绍](https://redis.io)

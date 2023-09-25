@@ -1,6 +1,7 @@
 ---
 title: MySQL 内功——锁
 permalink: 1693750829811.html
+date: '2023-09-18'
 ---
 
 ## 前言

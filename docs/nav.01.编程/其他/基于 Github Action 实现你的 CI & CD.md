@@ -1,6 +1,6 @@
 ---
 title: 基于 Github Action 实现你的 CI & CD
-permalink: 79398203540.html
+permalink: 1695634652517.html
 ---
 
 ## CI & CD

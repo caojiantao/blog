@@ -1,6 +1,7 @@
 ---
 title: 清空 Github 提交记录
-permalink: 79398309176.html
+permalink: 1695634658594.html
+date: '2023-03-07'
 ---
 
 ## 背景

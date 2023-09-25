@@ -1,6 +1,6 @@
 ---
 title: 消灭 if-else 终版
-permalink: 79397957492.html
+permalink: 1695634585650.html
 ---
 
 ## 业务背景

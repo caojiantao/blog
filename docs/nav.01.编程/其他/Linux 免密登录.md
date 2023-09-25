@@ -1,6 +1,7 @@
 ---
 title: Linux 免密登录
-permalink: 79398474612.html
+permalink: 1695634689722.html
+date: '2018-11-04'
 ---
 
 ## 1 本地生成秘钥文件

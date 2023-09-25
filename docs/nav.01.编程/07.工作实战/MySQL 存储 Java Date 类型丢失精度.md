@@ -1,6 +1,7 @@
 ---
 title: MySQL 存储 Java Date 类型丢失精度
 permalink: 1688710319.html
+date: '2023-07-07'
 ---
 
 ## 背景

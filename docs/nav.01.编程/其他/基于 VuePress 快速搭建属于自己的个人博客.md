@@ -1,6 +1,7 @@
 ---
 title: 基于 VuePress 快速搭建属于自己的个人博客
-permalink: 79398229448.html
+permalink: 1695634649435.html
+date: '2023-03-05'
 ---
 
 ## 前言

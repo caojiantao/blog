@@ -1,6 +1,7 @@
 ---
 title: Spring Expression 简化你的动态校验
-permalink: 79398045596.html
+permalink: 1695634528581.html
+date: '2023-03-12'
 ---
 
 ## 背景

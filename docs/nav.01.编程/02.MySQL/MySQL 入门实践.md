@@ -1,6 +1,7 @@
 ---
 title: MySQL 入门实践
-permalink: 79399832612.html
+permalink: 1695633710099.html
+date: '2021-01-11'
 ---
 
 ## 1 数据库
