@@ -1,6 +1,6 @@
 ---
 title: Linux IO 模型
-permalink: 79397353156.html
+permalink: 1695711805678.html
 ---
 
 ## 前言

@@ -1,6 +1,7 @@
 ---
 title: 一次 MessageFormat.format 引发的线上事故
 permalink: 1695634590475.html
+date: '2021-12-21'
 ---
 
 ## 问题回顾

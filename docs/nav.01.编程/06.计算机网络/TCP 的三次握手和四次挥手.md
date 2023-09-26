@@ -1,6 +1,6 @@
 ---
 title: TCP 的三次握手和四次挥手
-permalink: 79398127952.html
+permalink: 1695712373781.html
 ---
 
 ## TCP头部（必看）

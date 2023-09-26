@@ -1,11 +1,12 @@
 ---
 title: 我终于懂了 IO 多路复用
-permalink: 79397313888.html
+permalink: 1695711789431.html
+date: '2023-03-30'
 ---
 
 ## 前言
 
-I/O 模型的演进，可以参考[Linux IO 模型](/docs/操作系统/Linux IO 模型.html)。重中之重的则是 **I/O 多路复用**，也是 Redis、Nginx 和 Netty 等实现高性能 I/O 的核心原理。
+I/O 模型的演进，可以参考 [Linux IO 模型](/1695711805678.html)。重中之重的则是 **I/O 多路复用**，也是 Redis、Nginx 和 Netty 等实现高性能 I/O 的核心原理。
 
 ## I/O 多路复用
 

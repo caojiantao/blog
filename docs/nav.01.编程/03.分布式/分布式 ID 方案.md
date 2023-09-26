@@ -1,6 +1,6 @@
 ---
 title: 分布式 ID 方案
-permalink: 79397421184.html
+permalink: 1695712340397.html
 ---
 
 ## 背景
