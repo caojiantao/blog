@@ -1,6 +1,7 @@
 ---
 title: Java SPI 到底是个啥
-permalink: 79399684924.html
+permalink: 1695712686622.html
+date: '2022-06-22'
 ---
 
 ## 啥是 SPI

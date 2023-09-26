@@ -1,6 +1,6 @@
 ---
 title: MySQL 进行分组 GROUP 排序后取 TOP 行
-permalink: 79399809444.html
+permalink: 1695712714807.html
 ---
 
 ## 1 案例

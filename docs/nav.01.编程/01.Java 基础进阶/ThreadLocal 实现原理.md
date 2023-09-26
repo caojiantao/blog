@@ -1,6 +1,7 @@
 ---
 title: ThreadLocal 实现原理
-permalink: 79399756680.html
+permalink: 1695712623505.html
+date: '2022-02-16'
 ---
 
 ## ThreadLocal介绍

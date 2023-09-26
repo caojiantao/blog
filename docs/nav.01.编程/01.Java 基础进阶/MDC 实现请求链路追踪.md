@@ -1,6 +1,6 @@
 ---
 title: MDC 实现请求链路追踪
-permalink: 79399705796.html
+permalink: 1695712678845.html
 ---
 
 ## 业务背景
