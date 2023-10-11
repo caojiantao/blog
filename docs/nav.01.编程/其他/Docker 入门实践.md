@@ -38,7 +38,7 @@ Docker 的三个重要概念：
 
 Docker 使用客户端-服务器 (C/S) 架构模式，使用远程 API 来管理和创建 Docker 容器。
 
-![](http://image.caojiantao.site:1024/2da1e89e45b4bf6028db40664fc034b2.png)
+![](https://image.caojiantao.site:1024/2da1e89e45b4bf6028db40664fc034b2.png)
 
 1. Docker_Client
 
@@ -394,11 +394,11 @@ flush privileges;
 
 Docker 连接
 
-![](http://image.caojiantao.site:1024/e857df198f76cf6702b90005d7372c21.png)
+![](https://image.caojiantao.site:1024/e857df198f76cf6702b90005d7372c21.png)
 
 如果 docker 远程连接采用 TLS 连接，那么首先将服务器的`ca.pem`、`cert.pem`和`key.pem`三个文件下载到本地`D:\docker`目录，然后如图设置 docker 连接；
 
-![](http://image.caojiantao.site:1024/5e468fb73ec7c5f9b5b35fc60425e3ed.png)
+![](https://image.caojiantao.site:1024/5e468fb73ec7c5f9b5b35fc60425e3ed.png)
 
 Dockerfile
 
@@ -415,10 +415,10 @@ ENTRYPOINT [ "java", "-jar", "app.jar" ]
 
 增加镜像部署配置，注意最底部 Maven 命令，clean package -DskipTests，用来生成构建镜像需要的 jar 包；
 
-![](http://image.caojiantao.site:1024/360258e653cc45936696d87f835b9f88.png)
+![](https://image.caojiantao.site:1024/360258e653cc45936696d87f835b9f88.png)
 
 外部挂载
 
 通常需要挂载“项目配置”、“静态资源”和“服务日志”几个目录，通过 idea 也能很方便的操作，通过上图中的`Bind mounts`设置；
 
-![](http://image.caojiantao.site:1024/009483dd6254be9a517c0158bed8fd55.png)
+![](https://image.caojiantao.site:1024/009483dd6254be9a517c0158bed8fd55.png)

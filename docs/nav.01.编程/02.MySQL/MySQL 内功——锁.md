@@ -6,7 +6,7 @@ date: '2023-09-18'
 
 ## 前言
 
-![](http://image.caojiantao.site:1024/0c99bfc0-1a48-436c-9ac5-1e32917851ba.jpg)
+![](https://image.caojiantao.site:1024/0c99bfc0-1a48-436c-9ac5-1e32917851ba.jpg)
 
 MySQL 的锁机制十分复杂，对其没有一个整体的认知会越来越乱。
 
@@ -244,7 +244,7 @@ INSERT INTO employees VALUE (2023, 'kunkun', 8000);
 
 执行`SHOW ENGINE INNODB STATUS;`查看死锁日志；
 
-![](http://image.caojiantao.site:1024/f0ee6cfe-622c-4a85-b709-ea4d166103c6.jpg)
+![](https://image.caojiantao.site:1024/f0ee6cfe-622c-4a85-b709-ea4d166103c6.jpg)
 
 所以在生产环境中，慎用 saveOrUpdate 方法。
 
@@ -279,7 +279,7 @@ INSERT INTO t VALUE (20, 20);
 
 `show engine innodb status;`观察死锁日志；
 
-![](http://image.caojiantao.site:1024/d3e9780d-bc1b-4841-a5c0-e8d3c78b3ed3.jpg)
+![](https://image.caojiantao.site:1024/d3e9780d-bc1b-4841-a5c0-e8d3c78b3ed3.jpg)
 
 事务(2)和事务(3)都持有(10, 20)之间的间隙锁，并且同时在等待插入意向锁由于事务(1)持有该间隙锁。当事务(1)提交后事务(2)和事务(3)都需要获取插入意向锁，但由于对方持有间隙锁从而造成死锁。
 

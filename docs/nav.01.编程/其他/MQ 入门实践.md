@@ -8,13 +8,13 @@ date: '2021-04-19'
 
 Message Queue，消息队列，FIFO 结构。
 
-![](http://image.caojiantao.site:1024/fd065333c99fbdc96bb8418db9823aef.png)
+![](https://image.caojiantao.site:1024/fd065333c99fbdc96bb8418db9823aef.png)
 
 
 
 例如电商平台，在用户支付订单后执行对应的操作；
 
-![](http://image.caojiantao.site:1024/c23f7970c7c350a51858b164541fa9be.png)
+![](https://image.caojiantao.site:1024/c23f7970c7c350a51858b164541fa9be.png)
 
 优点：
 
@@ -51,7 +51,7 @@ Java Message Service，Java消息服务，类似 JDBC 提供了访问数据库�
 
 协作方式图示为；
 
-![](http://image.caojiantao.site:1024/4d091abe76b00c125af81e6e4ac1f13f.png)
+![](https://image.caojiantao.site:1024/4d091abe76b00c125af81e6e4ac1f13f.png)
 
 ## 业界产品
 
@@ -181,7 +181,7 @@ broker 地址为：`failover:(tcp://192.168.4.19:61616,tcp://192.168.4.19:61617,
 
 ActiveMQ 提供 VirtualTopic 功能，解决多消费端接收同一条消息的问题。于生产者而言，VirtualTopic  就是一个 topic，对消费而言则是 queue。
 
-![](http://image.caojiantao.site:1024/985f43d250c56a471edd63e763856ef0.png)
+![](https://image.caojiantao.site:1024/985f43d250c56a471edd63e763856ef0.png)
 
 在 activemq.xml 添加节点 destinationInterceptors；
 
@@ -205,7 +205,7 @@ ActiveMQ 提供 VirtualTopic 功能，解决多消费端接收同一条消息的
 
 ### 架构图示
 
-![](http://image.caojiantao.site:1024/c365df49c7ad6eada58e3aa4e854ee9a.png)
+![](https://image.caojiantao.site:1024/c365df49c7ad6eada58e3aa4e854ee9a.png)
 
 1. Name Server
 
@@ -332,7 +332,7 @@ RocketMQ 拓展包提供了管理控制台；
 
 [https://github.com/apache/rocketmq-externals/tree/master/rocketmq-console](https://github.com/apache/rocketmq-externals/tree/master/rocketmq-console)
 
-![](http://image.caojiantao.site:1024/d8200e8b1475613fdc62befd2eeb98e7.png)
+![](https://image.caojiantao.site:1024/d8200e8b1475613fdc62befd2eeb98e7.png)
 
 ## 重复消费
 
@@ -359,7 +359,7 @@ RocketMQ 拓展包提供了管理控制台；
 2. 消息顺序存储
 3. 消息顺序消费
 
-![](http://image.caojiantao.site:1024/5396b832fd482411063d8fc98a6a17ac.png)
+![](https://image.caojiantao.site:1024/5396b832fd482411063d8fc98a6a17ac.png)
 
 > 参考 RocketMq 中的 MessageQueueSelector 和 MessageListenerOrderly。
 
@@ -367,6 +367,6 @@ RocketMQ 拓展包提供了管理控制台；
 
 在分布式系统中，一个事务由多个本地事务组成。这里介绍一个基于 MQ 的分布式事务解决方案。
 
-![](http://image.caojiantao.site:1024/3b5800ee24499f7826996963e66401a2.png)
+![](https://image.caojiantao.site:1024/3b5800ee24499f7826996963e66401a2.png)
 
 通过 broker 的 HA 高可用，和定时回查 prepare 消息的状态，来保证最终一致性。

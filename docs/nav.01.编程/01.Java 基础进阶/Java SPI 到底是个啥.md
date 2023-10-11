@@ -10,7 +10,7 @@ date: '2022-06-22'
 
 最常见的便是 JDBC，定义了数据库驱动 `java.sql.Driver` 接口，数据库厂商自行实现驱动，例如 MySQL 的 `com.mysql.jdbc.Driver`。
 
-![](http://image.caojiantao.site:1024/b2a3ba6bfea0f6306e84ad5b6a4868f2.png)
+![](https://image.caojiantao.site:1024/b2a3ba6bfea0f6306e84ad5b6a4868f2.png)
 
 市面上应用 SPI 的框架还有 Spring、Dubbo 和 SLF4J 等等。
 

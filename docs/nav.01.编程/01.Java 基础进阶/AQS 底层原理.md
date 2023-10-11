@@ -9,7 +9,7 @@ AbstractQueuedSynchronizer，抽象队列同步器，是一个多线程访问共
 
 > 有趣的是，AQS并没有一个abstract抽象方法，而是提供多个protected让子类选择性重写。
 
-![](http://image.caojiantao.site:1024/69218b78c83701cb2b49650f1a455b34.png)
+![](https://image.caojiantao.site:1024/69218b78c83701cb2b49650f1a455b34.png)
 
 AQS底层由state和queue组成；
 

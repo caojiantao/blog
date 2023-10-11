@@ -43,7 +43,7 @@ public class SynchronizePrincipe {
 
 ## 基础知识：对象结构
 
-![](http://image.caojiantao.site:1024/37d10ede3ef03cc9a3384a744ce6a0ff.png)
+![](https://image.caojiantao.site:1024/37d10ede3ef03cc9a3384a744ce6a0ff.png)
 
 Java对象由三个部分组成；
 
@@ -77,11 +77,11 @@ Java对象由三个部分组成；
 
 ### 对象初始化
 
-![](http://image.caojiantao.site:1024/1de7c96cf2e4f9724e6c4cd2250e7cd9.png)
+![](https://image.caojiantao.site:1024/1de7c96cf2e4f9724e6c4cd2250e7cd9.png)
 
 ### 申请加锁
 
-![](http://image.caojiantao.site:1024/bb819f257b4d1246941fa06eabd942ed.png)
+![](https://image.caojiantao.site:1024/bb819f257b4d1246941fa06eabd942ed.png)
 
 ## 有理有据：实践证明
 

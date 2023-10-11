@@ -39,11 +39,11 @@ QUEUED
 
 Redis 支持一个发布订阅的消息通信模式，发送者 pub 发送消息，订阅者 sub 接受消息，可订阅任意数量的频道 channel；
 
-![](http://image.caojiantao.site:1024/b1ed19ea5252410359dddf59fcc0edb6.png)
+![](https://image.caojiantao.site:1024/b1ed19ea5252410359dddf59fcc0edb6.png)
 
 三个客户端都订阅了 channel 这个频道；
 
-![](http://image.caojiantao.site:1024/ba6dedbb00246fc7016fd630e51201c0.png)
+![](https://image.caojiantao.site:1024/ba6dedbb00246fc7016fd630e51201c0.png)
 
 一旦有消息发布pub到channel中，之前订阅该channel的三个客户端都会收到这个message；
 
