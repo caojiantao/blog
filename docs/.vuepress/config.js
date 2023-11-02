@@ -5,11 +5,6 @@ const { nav, sidebar } = getConfig({
   filter: meta => !meta.hideSideBar,
 });
 
-// console.log('------------------------------ nav ------------------------------')
-// console.log(nav);
-// console.log('------------------------------ sidebar ------------------------------')
-// console.log(sidebar);
-
 module.exports = {
   title: "涛涛小站",
   description: "曹建涛的个人博客",
@@ -31,6 +26,9 @@ module.exports = {
   },
   plugins: {
     "@vuepress/back-to-top": {},
-    '@vuepress/search': {}
+    '@vuepress/search': {},
+    'sitemap': {
+      hostname: 'https://caojiantao.site'
+    }
   },
 };

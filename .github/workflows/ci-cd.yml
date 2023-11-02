@@ -39,5 +39,5 @@ jobs:
         remote-password: ${{ secrets.PASSWORD }}
         sync: full
         local-path: docs/.vuepress/dist/
-        remote-path: /var/www/blog
+        remote-path: /usr/share/nginx/blog
 
