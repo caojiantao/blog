@@ -3,8 +3,6 @@ home: true
 heroImage: /logo.jpg
 heroText: 涛涛小站
 tagline: 一个专属涛涛的小站
-actionText: 随便逛逛 →
-actionLink: /nav.01.编程/
 features:
 - title: 编程
   details: 用来吃饭的家伙，活到老学到老。

@@ -1,9 +1,4 @@
-const getConfig = require("vuepress-bar");
-
-const { nav, sidebar } = getConfig({
-  addReadMeToFirstGroup: false,
-  filter: meta => !meta.hideSideBar,
-});
+const {sidebar, nav} = require('./utils/nav')
 
 module.exports = {
   title: "涛涛小站",
@@ -29,6 +24,7 @@ module.exports = {
     '@vuepress/search': {},
     'sitemap': {
       hostname: 'https://caojiantao.site'
-    }
+    },
+    'permalink-pinyin': {}
   },
 };
