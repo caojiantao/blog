@@ -287,7 +287,70 @@ INSERT INTO t VALUE (20, 20);
 > - 仅 insert into 也不会存在出现这种问题； 
 > - 操作主键 ID 也不会有这个问题；
 
+### 并发 DELETE
+
+在 MySQL **5.7.21** 版本，并发 DELETE 非主键唯一索引会插入一个间隙锁极易导致死锁问题。
+
+假设有 t 表，结构和内容如下；
+
+```sql
+CREATE TABLE `t` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `no` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uniq_no` (`no`) USING BTREE
+) ENGINE=InnoDB;
+
+INSERT INTO t VALUE (10, 10);
+INSERT INTO t VALUE (20, 20);
+```
+
+有三个事务并发执行 DELETE 语句；
+
+```sql
+-- 事务1
+DELETE FROM t WHERE no = 10;
+-- 事务2
+DELETE FROM t WHERE no = 10;
+-- 事务3
+DELETE FROM t WHERE no = 10; 
+```
+
+![](https://image.caojiantao.site:1024/38fed819-0151-40e7-a2df-1f090b9c65c0.jpg)
+
+竟然会发生死锁？？分析死锁的两个事务情况；
+
+- 事务 7706 等待获取 Record Lock
+- 事务 7708 持有 Record Lock
+- 事务 7708 等待获取 Next-Key Lock
+
+为避免事务 7706 发生饥饿现象，事务 7708 需要等待事务 7706 获取行锁成功后才能获取 Next-Key Lock，由于互相等待从而造成死锁。
+
+回顾下 MySQL 执行 DELETE 语句只是将对应记录 MARK DELETE 而不是物理删除，对唯一索引记录加锁需要分成三种情况；
+
+1. 记录存在，加 Record Lock；
+2. 记录存在但 MARK DELETE，加 Next-Key Lock；
+3. 记录不存在，加 Gap Lock;
+
+再来看看三个事务逻辑执行情况；
+
+| 事务(1) | 事务(2) | 事务(3) |
+| -------- | -------- | -------- |
+| 对记录加 Record Lock |  |  |
+|  | Record Lock 阻塞 | Record Lock 阻塞 |
+| MARK DELETE |  |  |
+| 事务提交 |  |  |
+|  | 获取 Record Lock 成功<br>事务 restart 申请获取 Next-Key Lock |  |
+| |  | 死锁 |
+
+根据事务(3)执行 DELETE 的时机在 MARK DELETE 前后，出现死锁的日志也分为等待 Record Lock 和等待 Next-Key Lock。
+
+
+> 8.x 也不出出现...
+
 ## 参考
 
 - [InnoDB Locking and Transaction Model](https://dev.mysql.com/doc/refman/5.7/en/innodb-locking-transaction-model.html)
 - [解决死锁之路 - 了解常见的锁类型](https://blog.csdn.net/fengyuyeguirenenen/article/details/124948385)
+- [MySQL 死锁产生原因及解决方法](https://zhuanlan.zhihu.com/p/267522634)
+- [InnoDB should not lock a delete-marked record](https://bugs.mysql.com/bug.php?id=19762)
