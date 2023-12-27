@@ -41,7 +41,7 @@ flowchart LR
     end
 ```
 
-![](https://image.caojiantao.site:1024/fba2130e-942d-4eab-8895-df1ada98b822.jpg)
+![](http://media.caojiantao.site:1024/blog/fba2130e-942d-4eab-8895-df1ada98b822.jpg)
 
 ## 时序图
 
@@ -67,7 +67,7 @@ sequenceDiagram
     note over 涛涛,松松 :准备开始下一次对话
 ```
 
-![](https://image.caojiantao.site:1024/c72a9c26-dd30-41aa-a54a-35d17fe383ad.jpg)
+![](http://media.caojiantao.site:1024/blog/c72a9c26-dd30-41aa-a54a-35d17fe383ad.jpg)
 
 消息箭头有几种形式；
 - -实线，--虚线
@@ -92,4 +92,4 @@ stateDiagram
     动作校验 --> 沮丧 :挨批评
 ```
 
-![](https://image.caojiantao.site:1024/d2eb5927-2121-4460-b1b4-cbcd96b98682.jpg)
+![](http://media.caojiantao.site:1024/blog/d2eb5927-2121-4460-b1b4-cbcd96b98682.jpg)

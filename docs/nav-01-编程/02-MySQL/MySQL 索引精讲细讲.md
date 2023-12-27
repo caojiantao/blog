@@ -6,13 +6,13 @@ date: '2023-12-04'
 
 ## 认识索引
 
-![](https://image.caojiantao.site:1024/29650fc2-4162-4f2b-b9c2-db5b759993d3.jpg)
+![](http://media.caojiantao.site:1024/blog/29650fc2-4162-4f2b-b9c2-db5b759993d3.jpg)
 
 MySQL 索引是一种用于提高数据库查询性能的**数据结构**。例如一本书就是一个数据库，“索引”则是前面的目录，查找内容时可以先通过目录快速定位章节，而不是全书逐页比对内容。
 
 ## 索引归类
 
-![](https://image.caojiantao.site:1024/114f5b39-52e2-48b1-bafd-93dd7a776f3f.jpg)
+![](http://media.caojiantao.site:1024/blog/114f5b39-52e2-48b1-bafd-93dd7a776f3f.jpg)
 
 MySQL 索引可以按照不同维度归类总结；
 
@@ -30,7 +30,7 @@ MySQL 索引分别有 HASH 和 BTREE（B+） 两种数据结构；
 - 普通的 BTREE 每个节点都是完整的数据，导致节点数较多层级较高
 - 而且 BTREE 数据分散在不同的节点，性能不稳定
 
-![](https://image.caojiantao.site:1024/bd9d59ea-2f15-48f0-8772-2d888abdf1f5.jpg)
+![](http://media.caojiantao.site:1024/blog/bd9d59ea-2f15-48f0-8772-2d888abdf1f5.jpg)
 
 ### 存储方式
 
@@ -62,11 +62,11 @@ select * from user where match(`username`) against('建涛');
 
 页 InnoDB 管理存储空间的基本单位，一页大小一般是 16KB。上面所说的索引 BTREE 一个节点也就是一页，下面是页的结构示意图；
 
-![](https://image.caojiantao.site:1024/6594dda0-158b-42ed-9d74-9b55963f6e10.jpg)
+![](http://media.caojiantao.site:1024/blog/6594dda0-158b-42ed-9d74-9b55963f6e10.jpg)
 
 每条记录除了保存真实数据意外，还保存了指向下一条记录的指针，组成一个完整的记录链表。为避免遍历整个链表，将用户记录进行分组（最多 8 条），将每个分组最大记录的地址偏移量写入页目录中。
 
-![](https://image.caojiantao.site:1024/e26981ee-f43f-464d-99f3-6d75cd1e51bc.jpg)
+![](http://media.caojiantao.site:1024/blog/e26981ee-f43f-464d-99f3-6d75cd1e51bc.jpg)
 
 页内查询的过程可总结成两个步骤；
 - 通过页目录二分法确定目标可能所在分组
@@ -74,7 +74,7 @@ select * from user where match(`username`) against('建涛');
 
 表中存放的记录通常需要用到很多页，页间通过双向链表相关联。与页目录类似，可以将多个页进行分组，将每个页中最小的记录写入一个新页中。由于页大小限制，新页也会有多个，从而继续分组。这也就是 BTREE 的由来。
 
-![](https://image.caojiantao.site:1024/d7abb06e-cbb2-4aea-b25c-59d9df946867.jpg)
+![](http://media.caojiantao.site:1024/blog/d7abb06e-cbb2-4aea-b25c-59d9df946867.jpg)
 
 ## 高级术语
 

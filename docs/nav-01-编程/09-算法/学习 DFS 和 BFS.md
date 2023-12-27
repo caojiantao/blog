@@ -12,7 +12,7 @@ permalink: "1695566498741"
 
 以遍历二叉树为例；
 
-![](https://image.caojiantao.site:1024/24241f87252859d67f24913728ec2808.png)
+![](http://media.caojiantao.site:1024/blog/24241f87252859d67f24913728ec2808.png)
 
 ### DFS
 

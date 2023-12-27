@@ -41,13 +41,13 @@ echo "# Hello VuePress" > docs/README.md
 yarn docs:dev
 ```
 
-![](https://image.caojiantao.site:1024/d4e82045-6c3c-442d-bf98-0875239cdc16.jpg)
+![](http://media.caojiantao.site:1024/blog/d4e82045-6c3c-442d-bf98-0875239cdc16.jpg)
 
 ## 侧边栏菜单
 
 按文件夹整理文章分类；
 
-![](https://image.caojiantao.site:1024/d57bbe4f-8693-414b-9b92-4022eb02b124.jpg)
+![](http://media.caojiantao.site:1024/blog/d57bbe4f-8693-414b-9b92-4022eb02b124.jpg)
 
 按[侧边栏分组](https://www.vuepress.cn/theme/default-theme-config.html#%E4%BE%A7%E8%BE%B9%E6%A0%8F%E5%88%86%E7%BB%84)编写侧边栏；
 
@@ -91,7 +91,7 @@ module.exports = {
 }
 ```
 
-![](https://image.caojiantao.site:1024/64ab3d74-4245-454e-b193-ee5279b6796b.jpg)
+![](http://media.caojiantao.site:1024/blog/64ab3d74-4245-454e-b193-ee5279b6796b.jpg)
 
 ## 链接转拼音
 

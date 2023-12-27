@@ -8,15 +8,15 @@ date: '2022-06-29'
 
 **R**emote **P**rocedure **C**all，远程过程调用。在**分布式**场景下，调用远程服务，就像本地调用一样简单。
 
-![](https://image.caojiantao.site:1024/4edaade3785a01794fedc9b74b33d4b6.png)
+![](http://media.caojiantao.site:1024/blog/4edaade3785a01794fedc9b74b33d4b6.png)
 
 而在分布式场景下，server 通常都是集群模式；
 
-![](https://image.caojiantao.site:1024/e2b469825fc7a91fa63196a4af7ded63.png)
+![](http://media.caojiantao.site:1024/blog/e2b469825fc7a91fa63196a4af7ded63.png)
 
 有多个 server 节点，如何同步给 client，这就涉及到了 registry 注册中心；
 
-![](https://image.caojiantao.site:1024/a426dcfa2329c3430099c5f0075695b0.png)
+![](http://media.caojiantao.site:1024/blog/a426dcfa2329c3430099c5f0075695b0.png)
 
 provider 作为服务提供方，将自身信息注册到 registry 中，consumer 服务消费方通过 registry 订阅 provider 信息，在 PRC 调用时选择合适的 provider 节点。
 
@@ -54,7 +54,7 @@ RPC 的 JDK(1.1) 版本，不过由于存在漏洞和太过局限性，并不广
 
 阿里的知名 RPC 框架，后加入 Apache 孵化器；
 
-![](https://image.caojiantao.site:1024/05d444471ccb19dd202645d5e127228d.png)
+![](http://media.caojiantao.site:1024/blog/05d444471ccb19dd202645d5e127228d.png)
 
 ### [Spring Cloud](https://spring.io/projects/spring-cloud)
 
@@ -178,7 +178,7 @@ public class UserHandler implements InvocationHandler {
 
 
 
-![](https://image.caojiantao.site:1024/dcb2cbdff8d53279ecc1d73bdb4a1e8e.png)
+![](http://media.caojiantao.site:1024/blog/dcb2cbdff8d53279ecc1d73bdb4a1e8e.png)
 
 ## 注册中心
 

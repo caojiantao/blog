@@ -119,7 +119,7 @@ MySQL 是一个  Oracle 旗下的关系型数据库，使用 SQL 语言进行增
 
 常见的索引数据结构有 B+ 树、Hash。以最常用的 B+ 树为例；
 
-![](https://image.caojiantao.site:1024/bcd4b5074c9eb24e3fe966c8d8e64cbc.png)
+![](http://media.caojiantao.site:1024/blog/bcd4b5074c9eb24e3fe966c8d8e64cbc.png)
 
 按照 B+ 树存储方式可以把索引分为两大类；
 
@@ -327,7 +327,7 @@ binlog 是 MySQL 最重要的日志，记录了所有的 DDL 和 DML 语句，�
 
 
 
-![](https://image.caojiantao.site:1024/9d52760955d78d26b9c2946bced19046.png)
+![](http://media.caojiantao.site:1024/blog/9d52760955d78d26b9c2946bced19046.png)
 
 
 
