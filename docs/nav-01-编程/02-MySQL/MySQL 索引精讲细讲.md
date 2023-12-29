@@ -30,8 +30,6 @@ MySQL 索引分别有 HASH 和 BTREE（B+） 两种数据结构；
 - 普通的 BTREE 每个节点都是完整的数据，导致节点数较多层级较高
 - 而且 BTREE 数据分散在不同的节点，性能不稳定
 
-![](http://media.caojiantao.site:1024/blog/bd9d59ea-2f15-48f0-8772-2d888abdf1f5.jpg)
-
 ### 存储方式
 
 根据 BTREE 叶子节点存储记录的完整性，索引又能分成；
@@ -74,7 +72,9 @@ select * from user where match(`username`) against('建涛');
 
 表中存放的记录通常需要用到很多页，页间通过双向链表相关联。与页目录类似，可以将多个页进行分组，将每个页中最小的记录写入一个新页中。由于页大小限制，新页也会有多个，从而继续分组。这也就是 BTREE 的由来。
 
-![](http://media.caojiantao.site:1024/blog/d7abb06e-cbb2-4aea-b25c-59d9df946867.jpg)
+![](http://media.caojiantao.site:1024/blog/336b23d9-4f47-4e5c-a2a2-37777bcfd709.png)
+
+**数据页使用双向链表相连，页内记录用单向链表相连。** 我的理解前者是便于索引的逆向遍历，后者总是要遍历记录链表可以节省一个指针。
 
 ## 高级术语
 
