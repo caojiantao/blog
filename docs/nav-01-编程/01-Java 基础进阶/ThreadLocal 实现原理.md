@@ -13,11 +13,15 @@ ThreadLocal<String> local = new ThreadLocal<>();
 local.set("caojiantao");
 new Thread(() -> {
     local.set("chenlisha");
+    // chenlisha
+    System.out.println(local.get());
 }).start();
 new Thread(() -> {
     // null
     System.out.println(local.get());
 }).start();
+// caojiantao
+System.out.println(local.get());
 ```
 
 通常有以下几个应用场景：
@@ -28,26 +32,27 @@ new Thread(() -> {
 
 ## 原理图解
 
-![](http://media.caojiantao.site:1024/blog/f1ee2b91151f23b0ca79a21e60981427.png)
+![](http://media.caojiantao.site:1024/blog/e5d2487d-38fb-4239-87cb-853c9d832c4f.png)
 
 着重描述下`ThreadLocalMap`；
 
 - 是`Thread`的私有变量，线程间隔离
 - 未实现`Map`接口，JDK自实现的简易`Map`
 - `Entry`继承自`WeakReference`，对应的`Key`是弱引用
-- `Key`为`ThreadLocal`实例
-- 通过**开放寻址法**解决hash冲突
+- `Key`指向`ThreadLocal`实例
+- 通过**开放寻址法**解决 hash 冲突
 
 ## 为什么是弱引用
 
 > 弱引用：只具有弱引用的对象在GC时会被回收。
 
-总结：弱应用+惰性删除，避免弱应用问题。
+ThreadLocal 关联的 value 只能通过 ThreadLocal 自身访问，如果 ThreadLocal 已无法访问例如定义成局部变量，那么关联的 value 实例将永远无法访问，从而造成**内存泄漏**。
 
-1. `ThreadLocal`是弱引用，在GC没有其他引用时内存会被回收；
-2. `ThreadLocal`在`get`、`set`和`rehash`时都会清除`key`为`null`的`Entry`；
+![](http://media.caojiantao.site:1024/blog/6dcb0610-e68d-4c57-9c28-51ae347e578b.png)
 
-如果不是弱引用，当`ThreadLocal`不可触达时，关联的`value`也无法触达，刚好线程生命周期长（线程池）的话，由于`ThreadLocalMap`强引用的原因，`value`一直不会被释放从而造成内存泄露。
+再来看看这里 Entry 的 key 持有 value 的弱引用，假设上述情况发生，JVM 也能通过 GC 释放 local 实例。从而在接下来访问该 Entry 时通过 key 指向的实例判断该 Entry 是否已经失效。
+
+总结：弱应用+惰性删除，避免内存泄漏问题。
 
 贴一段验证弱引用的代码；
 
@@ -73,7 +78,9 @@ static class Entry extends WeakReference<Object> {
 }
 ```
 
-## ThreadLocal.set
+## 源码解读
+
+### ThreadLocal.set
 
 ```java
 public void set(T value) {
@@ -88,7 +95,7 @@ public void set(T value) {
 }
 ```
 
-## ThreadLocal.get
+### ThreadLocal.get
 
 ```java
 public T get() {
@@ -108,7 +115,7 @@ public T get() {
 }
 ```
 
-## ThreadLocal.remove
+### ThreadLocal.remove
 
 ```java
 public void remove() {
@@ -122,7 +129,7 @@ public void remove() {
 
 > 为了避免内存泄漏，一定要触发remove方法。
 
-## ThreadLocalMap
+### ThreadLocalMap
 
 重新整理了下源码，截取部分；
 
@@ -179,7 +186,7 @@ static class ThreadLocalMap {
                 tab[i] = null;
                 size--;
             } else {
-                // h!=i 说明rehash了，尽量向前挪下位置，可能是为了节省空间
+                // h!=i 需要rehash
                 int h = k.threadLocalHashCode & (len - 1);
                 if (h != i) {
                     tab[i] = null;
