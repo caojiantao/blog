@@ -53,7 +53,7 @@ Java对象由三个部分组成；
 
 ### Mark Word
 
-![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/57e6e147dbe447d0b96b4d310f01846a~tplv-k3u1fbpfcp-watermark.awebp)
+![](http://media.caojiantao.site:1024/blog/06eaebf8-2c04-437c-a659-45fba8e1e91f.webp)
 
 ## 重中之重：对象锁
 
