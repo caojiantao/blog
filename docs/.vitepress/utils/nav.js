@@ -13,6 +13,8 @@ let rootPath = path.join(__dirname, '../../posts');
 let files = fs.readdirSync(rootPath);
 
 let sidebar = {}
+let sidebarItemMap = {}
+
 let nav = []
 let rewrites = {}
 
@@ -80,12 +82,41 @@ function scanPostList(dir) {
       let file = fs.readFileSync(filePath, "utf-8");
       md.render(file);
       rewrites[filePath.substring(i)] = md?.meta?.permalink + '.md';
+
+      let splits = filePath.substring(i).split('/');
+      let items = getSidebarItems(splits.slice(0, splits.length - 1));
+      items.push({
+        text: md?.meta?.title,
+        link: `/${md?.meta?.permalink}.html`,
+      })
     }
   }
 }
 
+function getSidebarItems(splits) {
+  let array = sidebarItemMap[splits.join('/')];
+  if (array) {
+    return array;
+  }
+  if (splits.length == 1) {
+    if (!sidebar['/']) {
+      sidebar['/'] = []
+    }
+    sidebarItemMap[splits.join('/')] = sidebar['/'];
+    return sidebar['/'];
+  }
+  parentItems = getSidebarItems(splits.slice(0, splits.length - 1));
+  let item = {
+    text: splits[splits.length - 1].substring(4),
+    collapsed: true,
+    items: [],
+  }
+  parentItems.push(item)
+  sidebarItemMap[splits.join('/')] = item.items;
+  return item.items;
+}
+
 scanPostList(rootPath);
-console.log(rewrites);
 
 for (let file of files) {
   let filePath = path.join(rootPath, file);

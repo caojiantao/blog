@@ -1,4 +1,4 @@
-import { nav, rewrites } from './utils/nav'
+import { nav, rewrites, sidebar } from './utils/nav'
 
 // .vitepress/config.js
 export default {
@@ -24,17 +24,10 @@ export default {
       provider: 'local',
     },
     // nav: nav,
-    sidebar: {
-      '/posts/002 生活/': [{
-        text: '生活',
-        items: [
-          {text: '青年城小朋友', link: 'posts/002 生活/青年城小朋友'}
-        ]
-      }]
-    },
+    sidebar: sidebar,
     socialLinks: [
       { icon: 'github', link: 'https://github.com/caojiantao' }
     ],
   },
-  // rewrites: rewrites,
+  rewrites: rewrites,
 };
