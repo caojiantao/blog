@@ -8,6 +8,13 @@ hero:
   image:
     src: /logo.jpg
     alt: 涛涛小站
+  actions:
+    - theme: brand
+      text: 进入主页
+      link: /1695712690253.html
+    - theme: alt
+      text: Github
+      link: https://github.com/caojiantao
 
 features:
   - icon: 💻
