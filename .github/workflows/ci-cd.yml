@@ -38,6 +38,6 @@ jobs:
         remote-user: ${{ secrets.USER }}
         remote-password: ${{ secrets.PASSWORD }}
         sync: full
-        local-path: docs/.vuepress/dist/
+        local-path: docs/.vitepress/dist/
         remote-path: /usr/share/nginx/blog
 
