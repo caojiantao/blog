@@ -5,12 +5,9 @@
   "repository": "https://github.com/caojiantao/blog.git",
   "author": "caojiantao <13437104137@163.com>",
   "license": "MIT",
+  "packageManager": "yarn@1.22.22",
   "devDependencies": {
-    "markdown-it": "^14.1.0",
-    "markdown-it-meta": "^0.0.1",
-    "moment": "^2.29.4",
-    "vitepress": "^1.1.0",
-    "vuepress-plugin-permalink-pinyin": "^1.1.0"
+    "vitepress": "^1.6.4"
   },
   "scripts": {
     "docs:dev": "vitepress dev docs",

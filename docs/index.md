@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: 进入主页
-      link: /1695712690253.html
+      link: /posts/编程/Java 基础进阶/AQS 底层原理.html
     - theme: alt
       text: Github
       link: https://github.com/caojiantao

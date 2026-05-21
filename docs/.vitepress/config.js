@@ -1,9 +1,13 @@
-import { nav, rewrites, sidebar } from './utils/nav'
+import { nav } from './config/nav'
+import { sidebar } from './config/sidebar'
 
 // .vitepress/config.js
 export default {
   title: "涛涛小站",
   description: "曹建涛的个人博客",
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
+  ],
   locales: {
     "/": {
       lang: "zh-CN",
@@ -12,12 +16,12 @@ export default {
   ignoreDeadLinks: true,
   themeConfig: {
     repo: "caojiantao",
-    logo: 'logo.jpg',
+    logo: '/logo.jpg',
     editLinks: true,
     editLinkText: "编辑此页",
     footer: {
       message: '基于 MIT 许可发布',
-      copyright: '版权所有 © 2023-2024 曹建涛'
+      copyright: '版权所有 © 2023-2026 曹建涛'
     },
     i18nRouting: true,
     search: {
@@ -49,5 +53,4 @@ export default {
       label: '目录'
     },
   },
-  rewrites: rewrites,
 };
