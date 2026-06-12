@@ -90,6 +90,10 @@ export const sidebar = {
           "link": "/posts/编程/分布式/缓存与数据库的一致性.html"
         },
         {
+          "text": "一文讲清事务消息 Outbox 模式的设计与实现",
+          "link": "/posts/编程/分布式/事务消息 Outbox 模式设计与实现.html"
+        },
+        {
           "text": "聊聊分布式事务",
           "link": "/posts/编程/分布式/聊聊分布式事务.html"
         },
