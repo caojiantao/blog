@@ -1,8 +1,9 @@
+import { withMermaid } from 'vitepress-plugin-mermaid'
 import { nav } from './config/nav'
 import { sidebar } from './config/sidebar'
 
 // .vitepress/config.js
-export default {
+export default withMermaid({
   title: "涛涛小站",
   description: "曹建涛的个人博客",
   head: [
@@ -53,4 +54,4 @@ export default {
       label: '目录'
     },
   },
-};
+});
